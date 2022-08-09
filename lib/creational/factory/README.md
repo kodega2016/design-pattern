@@ -1,3 +1,4 @@
-- Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
+### Factory Design Pattern
+interface for creating an object but let the subclass decide which class to instantiate.
 
-- The Factory Method separates product construction code from the code that actually uses the product. Therefore it’s easier to extend the product construction code independently from the rest of the code.
+- mainly used to separate the object creation from its consumer.
