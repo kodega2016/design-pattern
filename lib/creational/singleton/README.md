@@ -1,22 +1,8 @@
-### Singleton Pattern
+### Singleton Design pattern
 
-Only return on instance of the class and mainly used for logging,caching etc.
-- used private constructor to create a static instance of the class.
-- expose factory constucor to get the static instance of the class.
+- only return one instance of the class.
+- expose somemethod to get the access of the instance
+- mainly used for where the creating the instance of the class is expensive
+- used for logging,caching etc
 
-
-```dart
-class Logger {
-  static final Logger _logger = Logger._();
-  const Logger._();
-  factory Logger() => _logger;
-}
-
-void main() {
-  final Logger logger = Logger();
-  final Logger alogger = Logger();
-  print(logger.hashCode);
-  print(alogger.hashCode);
-  //It will return the same instance of the logger class
-}
-```
+>it makes difficult to do unit test since it is not possible to mock the singleton unless we use some interface.
