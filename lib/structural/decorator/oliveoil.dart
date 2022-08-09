@@ -1,8 +1,8 @@
 import 'package:design_pattern/structural/decorator/pizza_decorator.dart';
 
-class Basil extends PizzaDecorator {
-  Basil(super.pizza) {
-    description = 'Basil';
+class OliveOil extends PizzaDecorator {
+  OliveOil(super.pizza) {
+    description = 'Olive Oil';
   }
 
   @override
@@ -12,6 +12,6 @@ class Basil extends PizzaDecorator {
 
   @override
   double getPrice() {
-    return pizza.getPrice() + 0.4;
+    return pizza.getPrice() + 2;
   }
 }
